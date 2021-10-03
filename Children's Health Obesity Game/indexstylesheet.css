@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 300%;
+}
+.titleAndButton {
+    margin-left: 30%;
+    margin-right: 35%;
+    margin-top: 15%;
+}
+.buttonContainer {
+    background-color: crimson;
+    border-radius: 20px;
+}
+.playButton{
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px;
+    font-weight: bold;
+    font-size: 300%;
+    margin-left: 38%;
+    
+}

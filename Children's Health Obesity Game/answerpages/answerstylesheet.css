@@ -1,0 +1,22 @@
+.exitButton {
+    background-color: crimson;
+    border-radius: 20px;
+    margin-left: 90%;
+}
+.exit {
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 40%;
+    color: white;
+}
+h1 {
+    font-weight: bold;
+}
+.para {
+    margin-left: 30%;
+}
+
+
+image{
+    float: left;
+}
