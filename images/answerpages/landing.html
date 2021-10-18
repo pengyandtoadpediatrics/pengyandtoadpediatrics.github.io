@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landingstylesheet.css" />
+
+    <title>Children's Health Interactive Game</title>
+</head>
+<body style="background-color: blanchedalmond;">
+
+    <div class="symbols">
+        <!--Javascript to popup new tab-->
+        <script>
+            var popupWindow = null;
+            function centeredPopup(url, winName, scroll) {
+                popupWindow = window.open(url, winName)
+            }
+        </script>
+        <!--Image sybols with two onclick functions(swap(argument) & centeredPopup(url,winName, scroll) and styling attributes -->
+        <div>
+            <image id="sodaImg" src="images/soda.png" onclick="swap(this.id); centeredPopup('sodasymbol.html','myWindow','yes');return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="waterImg" src="images/water.png" onclick="swap(this.id); centeredPopup('watersymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="bedImg" src="images/bed.png" onclick="swap(this.id); centeredPopup('bedsymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+        </div>
+        <div>
+            <image id="yogaPoseImg" src="images/yoga-pose.png" onclick="swap(this.id); centeredPopup('yogapose.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="bikeImg" src="images/bicycle.png" onclick="swap(this.id); centeredPopup('bikesymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="pushUpImg" src="images/fitness.png" onclick="swap(this.id); centeredPopup('pushupsymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+
+        </div>
+        <div>
+            <image id="pizzaImg" src="images/pizza.png" onclick="swap(this.id); centeredPopup('pizzasymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="plasticBottleImg" src="images/plasticbottle.png" onclick="swap(this.id); centeredPopup('plasticbottlesymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="couchImg" src="images/couch.png" onclick="swap(this.id); centeredPopup('couchsymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+        </div>
+        <div>
+            <image id="appleImg" src="images/apple.png" onclick="swap(this.id); centeredPopup('applesymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="dumbbellImg" src="images/dumbbell.png" onclick="swap(this.id); centeredPopup('dumbbellsymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="runningImg" src="images/running.png" onclick="swap(this.id); centeredPopup('runningsymbol.html', 'myWindow', 'yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+        </div>
+        <!--Javascript to change the images from black to green when clicked-->
+            <script>
+                function swap(argument) {
+                    var element = document.getElementById(argument);
+                    var attr_Name = element.getAttribute("src");
+                    attr_Name = attr_Name.split("/").pop();
+                    if (argument == "sodaImg") {
+                        if (attr_Name == "soda.png") {
+                            document.getElementById(argument).setAttribute("src", "images/sodaGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/soda.png");
+                        }
+                    }
+                    else if (argument == "waterImg") {
+                        if (attr_Name == "water.png") {
+                            document.getElementById(argument).setAttribute("src", "images/waterGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/water.png");
+                        }
+                    }
+                    else if (argument == "bedImg") {
+                        if (attr_Name == "bed.png") {
+                            document.getElementById(argument).setAttribute("src", "images/bedGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/bed.png");
+                        }
+                    }
+                    else if (argument == "yogaPoseImg") {
+                        if (attr_Name == "yoga-pose.png") {
+                            document.getElementById(argument).setAttribute("src", "images/yoga-poseGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/yoga-pose.png");
+                        }
+                    }
+                    else if (argument == "bikeImg") {
+                        if (attr_Name == "bicycle.png") {
+                            document.getElementById(argument).setAttribute("src", "images/bicycleGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/bicycle.png");
+                        }
+                    }
+                    else if (argument == "pushUpImg") {
+                        if (attr_Name == "fitness.png") {
+                            document.getElementById(argument).setAttribute("src", "images/fitnessGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/fitness.png");
+                        }
+                    }
+                    else if (argument == "pizzaImg") {
+                        if (attr_Name == "pizza.png") {
+                            document.getElementById(argument).setAttribute("src", "images/pizzaGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/pizza.png");
+                        }
+                    }
+                    else if (argument == "plasticBottleImg") {
+                        if (attr_Name == "plasticbottle.png") {
+                            document.getElementById(argument).setAttribute("src", "images/plasticbottleGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/plasticbottle.png");
+                        }
+                    }
+                    else if (argument == "couchImg") {
+                        if (attr_Name == "couch.png") {
+                            document.getElementById(argument).setAttribute("src", "images/couchGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/couch.png");
+                        }
+                    }
+                    else if (argument == "appleImg") {
+                        if (attr_Name == "apple.png") {
+                            document.getElementById(argument).setAttribute("src", "images/appleGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/apple.png");
+                        }
+                    }
+                    else if (argument == "dumbbellImg") {
+                        if (attr_Name == "dumbbell.png") {
+                            document.getElementById(argument).setAttribute("src", "images/dumbbellGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/dumbbell.png");
+                        }
+                    }
+                    else if (argument == "runningImg") {
+                        if (attr_Name == "running.png") {
+                            document.getElementById(argument).setAttribute("src", "images/runningGreen.png");
+                            document.getElementById(argument).onclick = null;
+                        } else {
+                            document.getElementById(argument).setAttribute("src", "images/running.png");
+                        }
+                    }
+                }
+            </script>
+
+    </div>
+    <div class="exitButton">
+        <a href="index.html" class="exit">Exit</a>
+    </div>
+
+
+</body>
+</html>

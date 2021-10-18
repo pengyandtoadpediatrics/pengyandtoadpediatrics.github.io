@@ -1,0 +1,26 @@
+.symbols {
+    margin-top: 3%;
+    margin-left: 30%;
+}
+.exit {
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 40%;
+    color: white;
+}
+.exitButton {
+    background-color: crimson;
+    border-radius: 20px;
+    margin-right: 90%;
+}
+.forParentsButton {
+    background-color: crimson;
+    border-radius: 20px;
+    margin-left: 90%;
+}
+.forParents {
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 25%;
+    color: white;
+}
