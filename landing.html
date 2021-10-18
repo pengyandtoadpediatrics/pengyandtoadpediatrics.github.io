@@ -9,53 +9,157 @@
     <title>Children's Health Interactive Game</title>
 </head>
 <body style="background-color: blanchedalmond;">
-
+    <script>
+        var popupWindow = null;
+        function centeredPopup(url, winName, scroll) {
+            popupWindow = window.open(url, winName)
+        }
+    </script>
 
     <div class="symbols">
         <div>
-            <a href="sodasymbol.html">
-                <image src="images/soda.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
-            <a href="watersymbol.html">
-                <image src="images/water.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
-            <a href="bedsymbol.html">
-                <image src="images/bed.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
+
+            <image id="sodaImg" src="images/soda.png" onclick="swap(this.id); centeredPopup('sodasymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="waterImg" src="images/water.png" onclick="swap(this.id); centeredPopup('watersymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="bedImg" src="images/bed.png" onclick="swap(this.id); centeredPopup('bedsymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+
         </div>
         <div>
-            <a href="yogapose.html">
-                <image src="images/yoga-pose.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
-            <a href="bikesymbol.html">
-                <image src="images/bicycle.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
-            <a href="pushupsymbol.html">
-                <image src="images/fitness.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
+
+            <image id="yogaPoseImg" src="images/yoga-pose.png" onclick="swap(this.id); centeredPopup('yogapose.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="bikeImg" src="images/bike.png" onclick="swap(this.id); centeredPopup('bikesymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="pushUpImg" src="images/fitness.png" onclick="swap(this.id); centeredPopup('pushupsymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+
         </div>
         <div>
-            <a href="pizzasymbol.html">
-                <image src="images/pizza.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
-            <a href="plasticbottlesymbol.html">
-                <image src="images/plasticbottle.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
-            <a href="couchsymbol.html">
-                <image src="images/couch.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
+
+            <image id="pizzaImg" src="images/pizza.png" onclick="swap(this.id); centeredPopup('pizzasymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="plasticBottleImg" src="images/plasticbottle.png" onclick="swap(this.id); centeredPopup('plasticbottlesymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="couchImg" src="images/couch.png" onclick="swap(this.id); centeredPopup('couchsymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+
         </div>
         <div>
-            <a href="applesymbol.html">
-                <image src="images/apple.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
-            <a href="dumbbellsymbol.html">
-                <image src="images/dumbbell.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
-            <a href="runningsymbol.html">
-                <image src="images/running.png" style="width: 15%; height: 15%; margin-right: 5%;"></image>
-            </a>
+
+            <image id="appleImg" src="images/apple.png" onclick="swap(this.id); centeredPopup('applesymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="dumbbellImg" src="images/soda.png" onclick="swap(this.id); centeredPopup('dumbbellsymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+            <image id="runningImg" src="images/running.png" onclick="swap(this.id); centeredPopup('runningsymbol.html, myWindow, yes'); return false;" style="width: 15%; height: 15%; margin-right: 5%;"></image>
+
         </div>
+        <script>
+            function swap(argument) {
+                var element = document.getElementById(argument);
+                var sttr_Name = element.getAttribute("src");
+                sttr_Name = sttr_Name.split("/").pop();
+                if (argument == "sodaImg") {
+                    if (sttr_Name == "soda.png") {
+                        document.getElementById(argument).setAttribute("src", "images/sodaGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/soda.png")
+                    }
+                }
+                else if (argument == "waterImg") {
+                    if (sttr_Name == "water.png") {
+                        document.getElementById(argument).setAttribute("src", "images/waterGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/water.png")
+                    }
+                }
+                else if (argument == "bedImg") {
+                    if (sttr_Name == "bed.png") {
+                        document.getElementById(argument).setAttribute("src", "images/bedGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/bed.png")
+                    }
+                }
+                else if (argument == "yogaPoseImg") {
+                    if (sttr_Name == "yoga-pose.png") {
+                        document.getElementById(argument).setAttribute("src", "images/yoga-poseGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/yoga-pose.png")
+                    }
+                }
+                else if (argument == "bikeImg") {
+                    if (sttr_Name == "bicycle.png") {
+                        document.getElementById(argument).setAttribute("src", "images/bicycleGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/bicycle.png")
+                    }
+                }
+                else if (argument == "pushUpImg") {
+                    if (sttr_Name == "fitness.png") {
+                        document.getElementById(argument).setAttribute("src", "images/fitnessGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/fitness.png")
+                    }
+                }
+                else if (argument == "pizzaImg") {
+                    if (sttr_Name == "pizza.png") {
+                        document.getElementById(argument).setAttribute("src", "images/pizzaGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/pizza.png")
+                    }
+                }
+                else if (argument == "plasticBottleImg") {
+                    if (sttr_Name == "plasticbottle.png") {
+                        document.getElementById(argument).setAttribute("src", "images/plasticbottleGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/plasticbottle.png")
+                    }
+                }
+                else if (argument == "couchImg") {
+                    if (sttr_Name == "couch.png") {
+                        document.getElementById(argument).setAttribute("src", "images/couchGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/couch.png")
+                    }
+                }
+                else if (argument == "appleImg") {
+                    if (sttr_Name == "apple.png") {
+                        document.getElementById(argument).setAttribute("src", "images/appleGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/apple.png")
+                    }
+                }
+                else if (argument == "dumbbellImg") {
+                    if (sttr_Name == "dumbbell.png") {
+                        document.getElementById(argument).setAttribute("src", "images/dumbbellGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/dumbbell.png")
+                    }
+                }
+                else if (argument == "runningImg") {
+                    if (sttr_Name == "running.png") {
+                        document.getElementById(argument).setAttribute("src", "images/runningGreen.png");
+                        document.getElementById(argument).onclick = null;
+                    }
+                    else {
+                        document.getElementById(argument).setAttribute("src", "images/running.png")
+                    }
+                }
+            }
+        </script>
     </div>
     <div class="exitButton">
         <a href="index.html" class="exit">Exit</a>
